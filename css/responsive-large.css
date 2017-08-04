@@ -1,0 +1,91 @@
+/* General CSS Stylesheet */
+
+/*
+======================
+Navigation
+======================
+*/
+
+nav#main-nav ul li i {
+    font-size: 24px;
+    top: 2px;
+}
+
+nav#main-nav ul li a {
+    font-size: 110%;
+}
+
+/*
+======================
+Hero Image Slider
+======================
+*/
+
+#hero-image {
+    height: 100vh;
+}
+
+#hero-image::before {
+    bottom: 0vh;
+}
+
+/* Hero Text */
+#hero-text {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#hero-text h2 {
+    font-size: 120px;
+}
+
+#hero-text p {
+    left: 4px;
+    top: -50px;
+    font-size: 24px;
+    width: auto;
+}
+
+#hero-text a {
+    top: -20px;
+}
+
+/*
+======================
+Features Overview
+======================
+*/
+
+section#features div {
+    width: 60%;
+}
+
+/*
+======================
+Recommended Tours
+======================
+*/
+
+section#tours {
+    padding: 50px;
+}
+
+section#tours .section-wrapper {
+    width: 90%;
+}
+
+#search-wrapper label {
+    width: 200px;
+}
+
+#search-wrapper input {
+    width: 200px;
+}
+
+#search-wrapper select {
+    width: 200px;
+}
+
+#search-wrapper button {
+    width: 120px;
+}

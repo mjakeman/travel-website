@@ -1,0 +1,337 @@
+/* General CSS Stylesheet */
+
+/*
+======================
+Navigation
+======================
+*/
+
+nav#main-nav {
+    position: absolute;
+}
+
+nav#main-nav ul li.nav-button {
+    display: none;
+}
+
+nav#main-nav ul li.nav-quick-link {
+    display: none;
+}
+
+.nav-logo a {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 1.0 !important;
+}
+
+#nav-backdrop {
+    display: none;
+}
+
+/*
+======================
+Hero Image Slider
+======================
+*/
+
+#hero-image {
+    height: 100vh;
+}
+
+#hero-image::before {
+    bottom: 0vh;
+}
+
+/* Hero Text */
+#hero-text {
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    width: 100%;
+    left: 0;
+    right: 0;
+}
+
+#hero-text h2 {
+    font-size: 50px;
+}
+
+#hero-text p {
+    top: -10px;
+    font-size: 20px;
+    display: block;
+    width: 250px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+#hero-text p span {
+    display: none;
+}
+
+#hero-text a {
+    top: 15px;
+}
+
+/*
+======================
+Features Overview
+======================
+*/
+
+section#features div {
+    width: 80%;
+    display: block;
+}
+
+.feature {
+    width: 100%;
+    padding: 5px;
+    height: 100px;
+}
+
+.feature i {
+    position: relative;
+    left: -55px;
+}
+
+.feature h3 {
+    position: relative;
+    top: -67px;
+    right: -15px;
+}
+
+.feature p {
+    display: none;
+}
+
+.feature:last-child {
+    margin-bottom: 30px;
+}
+
+/*
+======================
+Recommended Tours
+======================
+*/
+
+section#tours {
+    width: 100%;
+    padding: 0;
+    margin-top: 50px;
+}
+
+section#tours .section-wrapper {
+    border: none;
+    border-bottom: 1px solid #f7f7f7 !important;
+    width: 100%;
+}
+
+.mobile-label {
+    display: block !important;
+    width: 80% !important;
+    text-align: left;
+}
+
+#search-wrapper label {
+    display: none;
+    padding-top: 10px;
+}
+
+#search-wrapper input {
+    width: 80%;
+}
+
+#search-wrapper select {
+    width: 80%;
+}
+
+#search-wrapper button {
+    width: 120px;
+}
+
+section#tours h1 {
+    margin-bottom: 5px;
+}
+
+section#tours form {
+    position: relative;
+    top: -450px;
+}
+
+section#tours #section-header {
+    height: 500px;
+}
+
+section#tours #section-header::before {
+    height: 500px;
+}
+
+#tours-wrapper {
+    padding: 25px; 
+    width: 100%;
+    margin-top: -15px;
+}
+
+#tours-wrapper h1 {
+    text-align: center !important;
+    padding-bottom: 5px;
+}
+
+section#tours aside {
+    display: none;
+}
+
+/* Tour Item Styling */
+
+.article-body {
+    padding: 15px;
+}
+
+.article-body h2 {
+    font-weight: normal;
+    font-size: 20px;
+}
+
+.article-body p {
+    display: none;
+}
+
+/*
+======================
+Destinations
+======================
+*/
+#destinations {
+    margin-top: 40px;
+    padding-bottom: 20px;
+}
+
+#destinations article {
+    width: 100%;
+    height: 150px;
+}
+
+#destinations article::before {
+    height: 150px;
+    background-image: linear-gradient(to left, transparent,black);
+}
+
+/*
+======================
+Testimonial
+======================
+*/
+#testimonial {
+    margin-top: 25px;
+    height: 500px;
+}
+
+#testimonial::before {
+    height: 500px;
+}
+
+#testimonial-wrapper {
+    top: -475px;
+}
+
+/*
+======================
+Footer
+======================
+*/
+
+footer nav ul {
+    display: none;
+}
+
+#footer-nav {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+#footer-nav li {
+    font-size: 16px;
+    padding: 5px;
+}
+
+footer span {
+    float: none;
+    width: 100%;
+    text-align: center;
+}
+
+footer img {
+    float: none;
+    display: block;
+    margin: auto;
+}
+
+/*
+======================
+Hero Image
+======================
+*/
+
+.hero-small h2 {
+    font-size: 48px !important;
+}
+
+/*
+======================
+Tree Widget
+======================
+*/
+
+#tree {
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/*
+======================
+Tour Descriptions
+======================
+*/
+
+#tour-desc {
+    width: 100%;
+    margin: auto;
+    padding: 0;
+    margin-top: 25px;
+    box-sizing: border-box;
+}
+
+#tour-desc-wrapper {
+    width: 100%;
+    border: none;
+    height: auto;
+}
+
+#tour-info-bar {
+    background-color: #f7f7f7;
+}
+
+#tour-info-bar p {
+    width: 100%;
+    font-size: 70%;
+}
+
+#tour-desc h2 {
+    text-align: center;
+}
+
+.tour-gallery-img {
+    height: 200px;
+    width: 100%;
+}
+
+#tour-desc aside {
+    width: 100%;
+    padding: 25px;
+    margin: 0;
+}

@@ -1,0 +1,107 @@
+/* General CSS Stylesheet */
+
+/*
+======================
+Navigation
+======================
+*/
+
+nav#main-nav ul li i {
+    font-size: 24px;
+    top: 2px;
+}
+
+nav#main-nav ul li a {
+    font-size: 110%;
+}
+
+/*
+======================
+Hero Image Slider
+======================
+*/
+
+#hero-image {
+    height: 100vh;
+}
+
+#hero-image::before {
+    bottom: 0vh;
+}
+
+/* Hero Text */
+#hero-text {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#hero-text h2 {
+    font-size: 120px;
+}
+
+#hero-text p {
+    left: 4px;
+    top: -50px;
+    font-size: 24px;
+    width: auto;
+}
+
+#hero-text a {
+    top: -20px;
+}
+
+/*
+======================
+Features Overview
+======================
+*/
+
+section#features div {
+    width: 1000px;
+}
+
+/*
+======================
+Recommended Tours
+======================
+*/
+
+section#tours {
+    padding: 50px;
+}
+
+section#tours .section-wrapper {
+    width: 1280px;
+}
+
+/*
+======================
+Testimonials
+======================
+*/
+
+#testimonial p {
+    width: 500px;
+}
+
+/*
+======================
+Tree Widget
+======================
+*/
+
+#tree {
+    width: 1280px;
+    margin: auto;
+}
+
+/*
+======================
+Tour Descriptions
+======================
+*/
+
+#tour-desc {
+    width: 1280px;
+    margin: auto;
+}

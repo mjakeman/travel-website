@@ -1,0 +1,1824 @@
+/* General CSS Stylesheet */
+
+/*
+======================
+Fonts
+======================
+*/
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Material Icons'), local('MaterialIcons-Regular'), url(ext/material-icons.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Poppins Regular'), local('Poppins-Regular'), url(ext/poppins.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url(ext/roboto.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto Condensed'), local('RobotoCondensed-Regular'), url(ext/roboto-condensed.woff2) format('woff2');
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  font-feature-settings: 'liga';
+}
+
+/*
+======================
+Global Styles
+======================
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #ffffff;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+/*
+======================
+Navigation
+======================
+*/
+
+nav#main-nav {
+    width: 100%;
+    color: #f1f1f1;
+    background-image: linear-gradient(to bottom,rgba(0,0,0,0.8),rgba(0,0,0,0));
+    display: block;
+    position: fixed;
+    z-index: 4;
+    top: 0;
+    font-family: "Poppins", 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+nav#main-nav ul {
+    list-style-type: none;
+    overflow: hidden;
+    width: 80%;
+    margin: auto;
+}
+
+nav#main-nav ul li {
+    float: left;
+    opacity: 0.9;
+}
+
+nav#main-nav ul li i {
+    opacity: 0.9;
+    font-size: 22px;
+    position: relative;
+    top: 3px;
+}
+
+nav#main-nav ul li a {
+    color: white;
+    opacity: 0.8;
+    display: block;
+    padding: 25px 10px;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+
+nav#main-nav ul li.nav-button {
+    /*background-image: linear-gradient(to bottom,(0,0,0,0),rgba(0,0,0,0));*/
+    background-color: rgba(0,0,0,0);
+    transition: all 0.2s ease-in-out;
+}
+
+nav#main-nav ul li.nav-button:hover {
+    /*background-image: linear-gradient(to bottom,rgba(0,0,0,0.6),rgba(0,0,0,0));*/
+    background-color: rgba(0,0,0,0.2);
+}
+
+nav#main-nav ul li.nav-button:hover > a {
+    opacity: 1.0;
+}
+
+/* Individual Nav Buttons */
+
+.nav-logo {
+    margin-right: 70px;
+}
+
+.nav-logo a {
+    padding: 10px 5px !important;
+    transition: all 0.2s ease-in-out;
+}
+
+.nav-logo a:hover {
+    opacity: 1.0 !important;
+}
+
+.nav-logo a svg {
+    height: 50px;
+    width: auto;
+}
+
+.nav-quick-link {
+    float: right !important;
+}
+
+/* Nav Backdrop */
+
+#nav-backdrop {
+    content: '';
+    width: 100%;
+    height: 80px;
+    background-color: rgba(0,0,0,0.4);
+    background-position: center bottom;
+    background-size: cover;
+    display: block;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+}
+
+/* Gradient Overlay
+#nav-backdrop::before {
+    content: '';
+	position: fixed;
+	top: 0;
+	left: 0;
+    width: 100%;
+	opacity: 0;
+    height: 80px;
+    z-index: 3;
+} */
+
+/*
+======================
+Hero Image Slider
+======================
+*/
+
+#hero-image {
+    width: 100%;
+    background-image: url("../img/places/oceania/russell_01.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+}
+
+#hero-image::before {
+    content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0vh;
+	left: 0;
+	background-image: linear-gradient(to bottom right,#5f2c82,#49a09d);
+	opacity: 0.5;
+}
+
+#hero-header {
+    height: 100vh;
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+/* Hero Text */
+#hero-text {
+    position: absolute;
+    top: 30vh;
+    left: 10vw;
+    display: block;
+    cursor: default;
+}
+
+#hero-text h2 {
+    font-family: "Poppins", 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+    font-size: 120px;
+}
+
+#hero-text p {
+    color: white;
+    font-size: 24px;
+    position: relative;
+    top: -50px;
+    left: 5px;    
+}
+
+#hero-text a {
+    font-family: "Roboto Condensed", "Roboto", 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    position: relative;
+    top: -25px;
+    left: 5px;
+    padding: 10px 25px;
+    font-size: 120%;
+    
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 3px solid white;
+    transition: all 0.3s;
+}
+
+#hero-text a span {
+    position: relative;
+    right: 0;
+    transition: all 0.3s;
+}
+
+#hero-text a span:after {
+    content: "\00bb";
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -15px;
+    transition: all 0.3s;
+}
+
+#hero-text a:hover {
+    background-color: rgba(73, 160, 157, 0.7);
+}
+
+#hero-text a:hover span {
+    right: 15px;
+}
+
+#hero-text a:hover span:after {
+    opacity: 1;
+    right: -15px;
+}
+
+/*
+======================
+Quickfix
+======================
+*/
+
+.margin-fix {
+    margin-top: 100vh;
+    display: block;
+    content: '';
+}
+
+/*
+======================
+Features Overview
+======================
+*/
+
+section#features {
+    width: 100%;
+    display: block;
+}
+
+section#features div {
+    width: 100%;
+    margin: auto;
+    display: flex;
+}
+
+.feature {
+    width: 25%;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.feature i {
+    margin-top: 48px;
+    margin-bottom: 30px;
+    font-size: 48px;
+    color: #333;
+    transition: all 0.2s ease-in-out;
+}
+
+.feature h3 {
+    color: #363333;
+    transition: all 0.2s ease-in-out;
+}
+
+.feature p {
+    margin-top: 5px;
+    margin-bottom: 40px;
+    font-size: 16px;
+    color: rgba(0,0,0,0.57);
+    transition: all 0.2s ease-in-out;
+}
+
+/* Feature 1 */
+.feature:nth-child(1) i {
+    color: #3f51b5;
+}
+
+.feature:nth-child(1):hover i {
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.37);
+}
+
+.feature:nth-child(1):hover p, .feature:nth-child(1):hover h3 {
+    color: rgba(0,0,0,1);
+}
+
+/* Feature 2 */
+.feature:nth-child(2) i {
+    color: #f44336;
+}
+
+.feature:nth-child(2):hover i {
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.37);
+}
+
+.feature:nth-child(2):hover p, .feature:nth-child(2):hover h3 {
+    color: rgba(0,0,0,1);
+}
+
+/* Feature 3 */
+.feature:nth-child(3) i {
+    color: #ffc107;
+}
+
+.feature:nth-child(3):hover i {
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.37);
+}
+
+.feature:nth-child(3):hover p, .feature:nth-child(3):hover h3 {
+    color: rgba(0,0,0,1);
+}
+
+/* Feature 4 */
+.feature:nth-child(4) i {
+    color: #4caf50;
+}
+
+.feature:nth-child(4):hover i {
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.37);
+}
+
+.feature:nth-child(4):hover p, .feature:nth-child(4):hover h3 {
+    color: rgba(0,0,0,1);
+}
+
+/*
+======================
+Recommended Tours
+======================
+*/
+
+section#tours {
+    width: 100%;
+    display: block;
+    padding: 50px;
+    box-sizing: border-box;
+}
+
+section#tours .section-wrapper {
+    width: 90%;
+    margin: auto;
+    /*background-color: #ffffff;*/
+    background-image: url("../img/swirl.png");
+    display: flex;
+    flex-flow: row wrap;
+    border: 1px solid #f7f7f7;
+}
+
+section#tours h1 {
+    font-family: "Roboto Condensed", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    font-weight: normal;
+    text-align: center;
+    color: white;
+}
+
+section#tours form {
+    position: relative;
+    top: -200px;
+}
+
+section#tours #section-header {
+    background-image: url("../img/places/america_north/yosemite_01.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 250px;
+    margin-bottom: 30px;
+}
+
+section#tours #section-header::before {
+    content: '';
+    width: 100%;
+    height: 250px;
+    background-image: linear-gradient(to top,#fdbb2d,#22c1c3);
+	opacity: 0.5;
+    display: block;
+}
+
+#search-wrapper {
+    text-align: center;
+}
+
+#search-label-container {
+    margin-top: 5px;
+}
+
+#search-wrapper label {
+    width: 200px;
+    margin: 5px;
+    margin-bottom: 0;
+    height: auto;
+    display: inline-block;
+    font-family: "Roboto Condensed", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgba(255,255,255,0.8);
+}
+
+.mobile-label {
+    display: none !important;
+    margin: auto !important;
+}
+
+#search-wrapper input {
+    height: 40px;
+    width: 200px;
+    border: 1px solid black;
+    padding: 8px;
+    margin: 5px;
+    background-color: rgba(0,0,0,0.6);
+    border-radius: 4px;
+    font-family: "Roboto", 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    outline: none;
+    color: rgba(255,255,255,0.8);
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+#search-wrapper select {
+    height: 40px;
+    width: 200px;
+    border: 1px solid black;
+    padding: 8px;
+    box-sizing: border-box;
+    margin: 5px;
+    background-color: rgba(0,0,0,0.6);
+    border-radius: 4px;
+    font-family: "Roboto", 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    outline: none;
+    color: rgba(255,255,255,0.8);
+    font-size: 14px;
+}
+
+#search-wrapper button {
+    width: 120px;
+    padding: 6px;
+    height: 30px;
+    background-color: transparent;
+    border-bottom: 1px solid white !important;
+    border-top: 1px solid white !important;
+    color: white;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    font-family: "Roboto Condensed", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: 0.2s all ease-in-out;
+    border-radius: 2px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#search-wrapper button span {
+    position: relative;
+    right: 0;
+    transition: all 0.3s;
+}
+
+#search-wrapper button span:after {
+    content: "\00bb";
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -15px;
+    transition: all 0.3s;
+}
+
+#search-wrapper button:hover span {
+    right: 15px;
+}
+
+#search-wrapper button:hover span:after {
+    opacity: 1;
+    right: -15px;
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    rgba(255,255,255,0.8);
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    rgba(255,255,255,0.8);
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    rgba(255,255,255,0.8);
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    rgba(255,255,255,0.8);
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+   color:    rgba(255,255,255,0.8);
+}
+
+#tours-wrapper {
+    padding: 20px; 
+    width: 70%;
+    box-sizing: border-box;
+    display: block;
+}
+
+#tours-wrapper h1 {
+    font-weight: normal;
+    color: rgba(0,0,0,0.67) !important;
+    position: static;
+    text-align: left !important;
+    margin-bottom: 15px;
+}
+
+section#tours aside {
+    width: 30%;
+    box-sizing: border-box;
+    padding: 30px;
+    padding-top: 70px;
+}
+
+/* Tour Item Styling */
+#tours article
+{
+    background-color: #ffffff;
+    border-radius: 4px;
+    box-shadow: 1px 1px 10px rgba(0,0,0,0.1);
+    transition: all 0.4s ease-in-out;
+    position: relative;
+    margin-bottom: 25px;
+}
+
+#tours article:hover {
+    box-shadow: 2px 2px 20px rgba(0,0,0,0.2);
+}
+
+#tours article header::before {
+    content: '';
+    width: 100%;
+    height: 120px;
+	border-radius: 4px 4px 0 0;
+    opacity: 0.5;
+    display: block;
+}
+
+#tours article header
+{
+    width: 100%;
+    height: 120px;
+    background-size: cover;
+    border-radius: 4px 4px 0 0;
+    background-position: center;
+}
+
+.article-body {
+    padding: 15px;
+}
+
+.article-body h2 {
+    font-weight: normal;
+}
+
+.article-body p {
+    font-size: 14px;
+    color: rgba(0,0,0,0.67);
+    margin-top: 3px;
+}
+
+.article-body span {
+    border-right: 1px solid rgba(0,0,0,0.67);
+    margin-right: 5px;
+    padding-right: 5px;
+}
+
+.article-body i {
+    font-size: 18px;
+    position: relative;
+    top: 3px;
+    color: #ffc107;
+    opacity: 0.67;
+}
+
+/* View All Button Styling */
+#view-all {
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+
+#view-all a {
+    font-family: "Roboto Condensed", "Roboto", 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-decoration: none;
+    color: rgba(0,0,0,0.67);
+    background-color: transparent;
+    position: relative;
+    padding: 10px 25px;
+    font-size: 16px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px rgba(0,0,0,0);
+    border: 2px solid transparent;
+    transition: all 0.4s;
+}
+
+#view-all a:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 4px;
+    left: 0;
+    background-color: rgba(73, 160, 157, 1);
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.4s ease-in-out 0s;
+}
+
+#view-all a:hover:before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+#view-all a span {
+    position: relative;
+    right: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+#view-all a span:after {
+    content: "\00bb";
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -15px;
+    transition: all 0.4s;
+}
+
+#view-all a:hover span {
+    right: 15px;
+}
+
+#view-all a:hover span:after {
+    opacity: 1;
+    right: -15px;
+}
+
+/* Ribbon Styling */
+
+.ribbon {
+    position: absolute;
+    color: white;
+    font-family: "Roboto Condensed", "Roboto", 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    top: 15px;
+    left: -10px;
+    padding: 5px 20px;
+}
+
+.ribbon-featured {
+    background-color: #185a9d;
+}
+
+.ribbon-featured::before {
+    border-color: #1a237e transparent transparent transparent;
+}
+
+.ribbon-hot {
+    background-color: #d32f2f;
+}
+
+.ribbon-hot::before {
+    border-color: #b71c1c transparent transparent transparent;
+}
+
+.ribbon::before {
+    content:"";
+	bottom:-10px;
+	position:absolute;
+	display:block;
+	border-style:solid;
+	z-index: 0;
+	left: 0;
+	border-width: 10px 0 0 10px;
+}
+
+/* Individual Article Styling */
+/* moved to bottom of document with rest of tour styling */
+
+/*
+======================
+Destinations
+======================
+*/
+#destinations {
+    display: block;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+#destinations-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+#destinations h1 {
+    font-family: "Roboto Condensed", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    font-weight: normal;
+    text-align: center;
+    color: rgba(0,0,0,0.67);
+    margin-bottom: 15px;
+    margin-top: 20px;
+}
+
+#destinations article {
+    width: 20%;
+    height: 300px;
+    background-size: cover;
+}
+
+#destinations article::before {
+    content: '';
+    width: 100%;
+    height: 300px;
+    background-image: linear-gradient(to bottom, transparent,black);
+    opacity: 0.2;
+    display: block;
+    transition: 0.3s all ease-in-out;
+}
+
+#destinations article:hover::before {
+    opacity: 0.7;
+}
+
+#destinations article:hover .dest-content {
+    top: -60px;
+    opacity: 1;
+}
+
+.dest-content {
+    position: relative;
+    top: -40px;
+    color: white;
+    margin-left: 15px;
+    cursor: default;
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+}
+
+.dest-content a {
+    cursor: pointer;
+    opacity: 0.7;
+    transition: all 0.2s ease-in-out;
+    font-size: 14px;
+    color: white;
+    text-decoration: none;
+}
+
+.dest-content a:hover {
+    opacity: 0.9;
+}
+
+#dest1 {
+    background-image: url("../img/places/europe/london_01.jpg");
+    background-position: right;
+}
+
+#dest2 {
+    background-image: url("../img/places/asia/hongkong_01.jpg");
+    background-position: center;
+}
+
+#dest3 {
+    background-image: url("../img/places/america_north/yosemite_02.jpg");
+    background-position: center;
+}
+
+#dest4 {
+    background-image: url("../img/places/america_south/rio_01.png");
+    background-position: center;
+}
+
+#dest5 {
+    background-image: url("../img/places/oceania/fiji_01.jpg");
+    background-position: center;
+}
+
+/*
+======================
+Divider
+======================
+*/
+
+.divider {
+    width: 80px;
+    display: block;
+    position: relative;
+    top: -12px;
+    opacity: 0.67;
+    margin: auto;
+}
+
+/*
+======================
+Testimonial
+======================
+*/
+#testimonial {
+    width: 100%;
+    background-image: url("../img/places/asia/hongkong_02.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    margin-bottom: 60px;
+}
+
+#testimonial::before {
+    content: '';
+    width: 100%;
+    height: 400px;
+    background-image: linear-gradient(to bottom right, #c0392b, #8e44ad);	border-radius: 4px 4px 0 0;
+    opacity: 0.6;
+    display: block;
+}
+
+#testimonial-wrapper {
+    position: relative;
+    top: -375px;
+}
+
+#testimonial h1 {
+    font-family: "Roboto Condensed", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    font-weight: normal;
+    text-align: center;
+    color: rgba(255,255,255,0.9);
+    margin-bottom: 15px;
+    padding-top: 20px;
+}
+
+#testimonial img {
+    width: 120px;
+    display: block;
+    margin: auto;
+    margin-top: 25px;
+}
+
+#testimonial h4 {
+    font-family: "Roboto Condensed", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    margin-top: 25px;
+    font-size: 18px;
+    color: rgba(250,250,250, 1);
+}
+
+#testimonial p {
+    width: 50%;
+    margin: auto;
+    display: block;
+    text-align: center;
+    margin-top: 5px;
+    padding-bottom: 25px;
+    color: rgba(255,255,255,0.8);
+    font-size: 18px;
+}
+
+#testimonial span {
+    text-align: center;
+    word-wrap: break-word;
+}
+
+/*
+======================
+Footer
+======================
+*/
+footer {
+    background-color: #f2f2f2;
+    padding: 50px 50px 0 50px;
+}
+
+footer nav {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    margin-bottom: 35px;
+}
+
+footer nav ul {
+    display: block;
+    width: 20%;
+    list-style-type: none;
+}
+
+footer nav ul h5 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    font-family: "Roboto Condensed", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgba(0,0,0,0.7);
+}
+
+footer nav ul li {
+    margin-bottom: 10px;
+    transition: all 0.2s ease-in-out;
+    font-size: 14px;
+}
+
+footer nav ul li:hover {
+    color: rgba(0,0,0,1);
+}
+
+footer nav ul li a {
+    color: rgba(0,0,0,0.9);
+    text-decoration: none;
+}
+
+footer .copy-text {
+    width: 40%;
+    display: block;
+    padding-bottom: 25px;
+    float: left;
+}
+
+footer .copy-text p {
+    font-size: 10px;
+    color: rgba(0,0,0,0.67);
+}
+
+/* Clearfix for floated elements */
+
+.clearfix {
+    clear: both;
+}
+
+
+
+
+
+/*
+The following CSS was designed after the construction of
+the landing page (e.g. About, Contact, Destinations, etc).
+*/
+
+/*
+======================
+Tree View Widget
+======================
+*/
+
+#tree {
+    width: 80%;
+    padding: 25px;
+    padding-top: 30px;
+    padding-bottom: 0;
+    margin: auto;
+}
+
+#tree p {
+    font-size: 20px;
+    font-family: "Roboto", 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgba(0,0,0,0.67);
+    font-weight: bold;
+}
+
+#tree span a {
+    font-weight: normal;
+    color: #4AC29A !important;
+}
+
+#tree a {
+    color: rgba(0,0,0,0.67);
+}
+
+/*
+======================
+Tour Descriptions
+======================
+*/
+
+#tour-desc {
+    width: 80%;
+    padding: 50px;
+    margin: auto;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+#tour-desc-wrapper {
+    width: 70%;
+    border: 1px solid #f7f7f7;
+    height: auto;
+}
+
+#tour-desc-content {
+    padding: 25px;
+    box-sizing: border-box;
+}
+
+#tour-desc-content h1 {
+    font-family: "Roboto Condensed", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    font-weight: normal;
+    color: rgba(0,0,0,0.77);
+}
+
+/* Tour Information */
+#tour-info-bar {
+    width: 100%;
+    border-top: 1px solid #f7f7f7;
+    border-bottom: 1px solid #f7f7f7;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 10px;
+}
+
+#tour-info-bar p {
+    font-size: 14px;
+    color: rgba(0,0,0,0.67);
+    margin-top: 3px;
+}
+
+#tour-info-bar span {
+    border-right: 1px solid rgba(0,0,0,0.67);
+    margin-right: 5px;
+    padding-right: 5px;
+}
+
+#tour-info-bar i {
+    font-size: 18px;
+    position: relative;
+    top: 3px;
+    color: #ffc107;
+    opacity: 0.67;
+}
+
+/* Gallery */
+
+#tour-desc h2 {
+    font-family: "Roboto Condensed", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 24px;
+    font-weight: normal;
+    color: rgba(0,0,0,0.77);
+    margin-left: 25px;
+    margin-bottom: 10px;
+}
+
+#tour-gallery {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.tour-gallery-img {
+    width: 50%;
+    overflow: hidden;
+    display: block;
+    height: 200px;
+    background-color: black;
+}
+
+.tour-gallery-img img {
+    width: 110%;
+    opacity: 1;
+    transition: 0.2s opacity ease-in-out;
+}
+
+.tour-gallery-img img:hover {
+    opacity: 0.8;
+}
+
+/* Sidebar */
+
+#tour-desc aside {
+    width: 25%;
+    padding: 25px;
+    box-sizing: border-box;
+    margin-left: 25px;
+    border: 1px solid #f7f7f7;
+    height: 490px;
+    background-image: url('../img/swirl.png');
+}
+
+#tour-desc aside h4 {
+    font-family: "Roboto Condensed", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: normal;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+#tour-desc aside form {
+    display: block;
+    width: 100%;
+}
+
+#tour-desc aside form select {
+    padding: 8px;
+    box-sizing: border-box;
+    height: 40px;
+    width: 100%;
+    border: 1px solid rgba(0,0,0,0.7);
+    outline: none;
+    margin-top: 5px;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-family: "Roboto", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 2px;
+}
+
+#tour-desc aside form input[type="date"] {
+    padding: 8px;
+    box-sizing: border-box;
+    height: 40px;
+    width: 100%;
+    border: 1px solid rgba(0,0,0,0.7);
+    outline: none;
+    margin-top: 5px;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-family: "Roboto", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 2px;
+}
+
+#tour-desc aside form #terms {
+    font-size: 12px;
+    margin-left: 5px;
+    position: relative;
+    top: -1px;
+}
+
+#tour-desc aside form button {
+    padding: 12px;
+    width: 100%;
+    height: 45px;
+    background-color: #4AC29A;
+    color: white;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    font-family: "Roboto Condensed", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: 0.2s all ease-in-out;
+    border-radius: 2px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#tour-desc aside form button span {
+    position: relative;
+    right: 0;
+    transition: all 0.3s;
+}
+
+#tour-desc aside form button span:after {
+    content: "\00bb";
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -15px;
+    transition: all 0.3s;
+}
+
+#tour-desc aside form button:hover span {
+    right: 15px;
+}
+
+#tour-desc aside form button:hover span:after {
+    opacity: 1;
+    right: -15px;
+}
+
+#tour-desc aside form label {
+    color: rgba(0,0,0,0.67);
+    font-family: "Roboto Condensed", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 80%;
+}
+
+#tour-desc aside form p {
+    margin-bottom: 10px;
+}
+
+/*
+======================
+Content Section
+======================
+*/
+
+#content {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+#content .section-wrapper {
+    width: 80%;
+    border: 1px solid #f7f7f7;
+    margin: auto;
+    padding: 25px;
+    box-sizing: border-box;
+}
+
+#content h1 {
+    font-weight: normal;
+    color: rgba(0,0,0,0.67);
+    position: static;
+    text-align: left;
+    margin-bottom: 15px;
+    font-family: "Roboto Condensed", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 30px;
+}
+
+#content h2 {
+    font-weight: bold;
+    color: rgba(0,0,0,0.67);
+    position: static;
+    text-align: left;
+    margin-top: 25px;
+    font-family: "Roboto Condensed", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+}
+
+#content h3 {
+    color: rgba(0,0,0,0.77);
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+#content span {
+    color: rgba(0,0,0,0.67);
+    font-family: "Roboto Condensed", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-bottom: 10px;
+    display: block;
+}
+
+#content p {
+    width: 60%;
+}
+
+/*
+======================
+Login
+======================
+*/
+
+#login {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 400px;
+    background-color: rgba(0,0,0,0.7);
+    box-shadow: 2px 2px 12px rgba(0,0,0,0.6);
+    height: 450px;
+    z-index: 3;
+    color: rgba(255,255,255,0.8);
+}
+
+#login h2 {
+    font-family: "Roboto Condensed", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: normal;
+    text-align: center;
+    margin-bottom: 15px;
+    padding: 45px 15px 15px 15px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.67);
+    display: block;
+    background-color: rgba(0,0,0,0.4);
+}
+
+#login form {
+    padding-top: 25px;
+    display: block;
+    width: 70%;
+    margin: auto;
+    position: static;
+}
+
+#login form input[type="text"],
+#login form input[type="password"] {
+    padding: 8px;
+    box-sizing: border-box;
+    height: 40px;
+    width: 100%;
+    border: 1px solid rgba(255,255,255,0.5);
+    background-color: rgba(0,0,0,0.6);
+    color: white;
+    outline: none;
+    margin-top: 5px;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-family: "Roboto", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#login form #remember {
+    font-size: 12px;
+    margin-left: 5px;
+    position: relative;
+    top: -1px;
+}
+
+#login form button {
+    padding: 12px;
+    width: 100%;
+    height: 45px;
+    background-color: #4AC29A;
+    color: white;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    font-family: "Roboto Condensed", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: 0.2s all ease-in-out;
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.67);
+    cursor: pointer;
+    margin-top: 25px;
+}
+
+#login form button span {
+    position: relative;
+    right: 0;
+    transition: all 0.3s;
+}
+
+#login form button span:after {
+    content: "\00bb";
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -15px;
+    transition: all 0.3s;
+}
+
+#login form button:hover span {
+    right: 15px;
+}
+
+#login form button:hover span:after {
+    opacity: 1;
+    right: -15px;
+}
+
+#login form label {
+    color: rgba(255,255,255,0.67);
+    font-family: "Roboto Condensed", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 80%;
+    padding-top: 15px;
+    display: block;
+}
+
+#login form p {
+    margin-bottom: 10px;
+}
+
+/*
+======================
+Hero Image Variations
+======================
+*/
+
+/* Medium Size */
+
+.hero-medium {
+    height: 60vh !important;
+}
+
+.hero-medium #hero-image {
+    height: 60vh;
+}
+
+.hero-medium #hero-image::before {
+    height: 60vh;
+}
+
+.hero-medium-fix {
+    margin-top: 60vh !important;
+}
+
+/* Small Size */
+
+.hero-small {
+    height: 40vh !important;
+}
+
+.hero-small #hero-image {
+    height: 40vh;
+}
+
+.hero-small #hero-image::before {
+    height: 40vh;
+}
+
+.hero-small-fix {
+    margin-top: 40vh !important;
+}
+
+.hero-small #hero-text h2 {
+    font-size: 64px;
+}
+
+/* Individual Hero Images */
+.hero-europe #hero-image {
+    background-image: url("../img/places/europe/london_01.jpg") !important;
+}
+
+.hero-europe #hero-image::before {
+    background-image: linear-gradient(to bottom right,#22c1c3,#fdbb2d);
+}
+
+.hero-asia #hero-image {
+    background-image: url("../img/places/asia/hongkong_01.jpg") !important;
+}
+
+.hero-asia #hero-image::before {
+    background-image: linear-gradient(to top left,#1a2a6c,#b21f1f,#fdbb2d);
+}
+
+.hero-america_north #hero-image {
+    background-image: url("../img/places/america_north/yosemite_01.jpg") !important;
+}
+
+.hero-america_north #hero-image::before {
+    background-image: linear-gradient(to top,#F3904F,#3B4371);
+}
+
+.hero-america_south #hero-image {
+    background-image: url("../img/places/america_south/rio_03.jpg") !important;
+}
+
+.hero-america_south #hero-image::before {
+    background-image: linear-gradient(to bottom,#283c86,#45a247);
+}
+
+.hero-oceania #hero-image {
+    background-image: url("../img/places/oceania/fiji_01.jpg") !important;
+}
+
+.hero-oceania #hero-image::before {
+    background-image: linear-gradient(to bottom left,#B993D6,#8CA6DB);
+}
+
+/* About */
+.page-about #hero-image {
+    background-image: url("../img/places/europe/haifa_02.jpg") !important;
+}
+
+.page-about #hero-image::before {
+    background-image: linear-gradient(to bottom right,#642B73,#C6426E);
+}
+
+/* Contact */
+.page-contact #hero-image {
+    background-image: url("../img/places/america_north/niagara_03.jpg") !important;
+}
+
+.page-contact #hero-image::before {
+    background-image: linear-gradient(to bottom right,#159957,#155799);
+}
+
+/* Login */
+.page-login #hero-image {
+    background-image: url("../img/places/asia/hongkong_01.jpg") !important;
+}
+
+.page-login #hero-image::before {
+    background-image: linear-gradient(to bottom right,#1a2a6c,#b21f1f,#fdbb2d);
+}
+
+/* Search */
+.page-search #hero-image {
+    background-image: url("../img/places/europe/london_01.jpg") !important;
+}
+
+.page-search #hero-image::before {
+    background-image: linear-gradient(to bottom right,#22c1c3,#fdbb2d);
+}
+
+/*
+======================
+Tour Card Variations
+======================
+*/
+
+/* Europe */
+.tour-europe-london header {
+    background-image: url("../img/places/europe/london_02.jpg");
+    background-position: center;
+}
+
+.tour-europe-london header::before {
+    background-image: linear-gradient(to top left,#22c1c3,#fdbb2d);
+}
+
+.tour-europe-london #hero-image {
+    background-image: url("../img/places/europe/london_02.jpg");
+    background-position: center;
+}
+
+.tour-europe-london #hero-image::before {
+    background-image: linear-gradient(to top left,#22c1c3,#fdbb2d);
+}
+
+
+.tour-europe-letterkenny header {
+    background-image: url("../img/places/europe/letterkenny_01.jpg");
+    background-position: left center;
+}
+
+.tour-europe-letterkenny header::before {
+    background-image: linear-gradient(to bottom left,#4AC29A,#BDFFF3);
+}
+
+.tour-europe-letterkenny #hero-image {
+    background-image: url("../img/places/europe/letterkenny_01.jpg");
+    background-position: left center;
+}
+
+.tour-europe-letterkenny #hero-image::before {
+    background-image: linear-gradient(to bottom left,#4AC29A,#BDFFF3);
+}
+
+
+.tour-europe-paris header {
+    background-image: url("../img/places/europe/paris_02.jpg");
+    background-position: left center !important;
+}
+
+.tour-europe-paris header::before {
+    background-image: linear-gradient(to top right,#C33764,#1D2671);
+}
+
+.tour-europe-paris #hero-image {
+    background-image: url("../img/places/europe/paris_02.jpg");
+    background-position: left center !important;
+}
+
+.tour-europe-paris #hero-image::before {
+    background-image: linear-gradient(to top right,#C33764,#1D2671);
+}
+
+
+.tour-europe-haifa header {
+    background-image: url("../img/places/europe/haifa_01.jpg");
+    background-position: center;
+}
+
+.tour-europe-haifa header::before {
+    background-image: linear-gradient(to bottom,#BE93C5,#7BC6CC);
+}
+
+.tour-europe-haifa #hero-image {
+    background-image: url("../img/places/europe/haifa_01.jpg");
+    background-position: center;
+}
+
+.tour-europe-haifa #hero-image::before {
+    background-image: linear-gradient(to bottom,#BE93C5,#7BC6CC);
+}
+
+/* Asia */
+.tour-asia-singapore header {
+    background-image: url("../img/places/asia/singapore_01.jpg");
+    background-position: center;
+}
+
+.tour-asia-singapore header::before {
+    background-image: linear-gradient(to top left,#ee0979,#ff6a00);
+    opacity: 0.3 !important;
+}
+
+.tour-asia-singapore #hero-image {
+    background-image: url("../img/places/asia/singapore_01.jpg");
+    background-position: center;
+}
+
+.tour-asia-singapore #hero-image::before {
+    background-image: linear-gradient(to top left,#ee0979,#ff6a00);
+    opacity: 0.3 !important;
+}
+
+
+.tour-asia-hongkong header {
+    background-image: url("../img/places/asia/hongkong_01.jpg");
+    background-position: center;
+}
+
+.tour-asia-hongkong header::before {
+    background-image: linear-gradient(to bottom right,#1a2a6c,#b21f1f,#fdbb2d);
+}
+
+.tour-asia-hongkong #hero-image {
+    background-image: url("../img/places/asia/hongkong_01.jpg");
+    background-position: center;
+}
+
+.tour-asia-hongkong #hero-image::before {
+    background-image: linear-gradient(to bottom right,#1a2a6c,#b21f1f,#fdbb2d);
+}
+
+
+.tour-asia-kualalumpur header {
+    background-image: url("../img/places/asia/kualalumpur_03.jpg");
+    background-position: center;
+}
+
+.tour-asia-kualalumpur header::before {
+    background-image: linear-gradient(to bottom right,#fc4a1a,#f7b733);
+}
+
+.tour-asia-kualalumpur #hero-image {
+    background-image: url("../img/places/asia/kualalumpur_03.jpg");
+    background-position: center;
+}
+
+.tour-asia-kualalumpur #hero-image::before {
+    background-image: linear-gradient(to bottom right,#fc4a1a,#f7b733);
+}
+
+/* North America */
+
+.tour-america_north-toronto header {
+    background-image: url("../img/places/america_north/toronto_01.jpg");
+    background-position: center;
+}
+
+.tour-america_north-toronto header::before {
+    background-image: linear-gradient(to top,#0B486B,#F56217);
+}
+
+.tour-america_north-toronto #hero-image {
+    background-image: url("../img/places/america_north/toronto_01.jpg");
+    background-position: center;
+}
+
+.tour-america_north-toronto #hero-image::before {
+    background-image: linear-gradient(to top,#0B486B,#F56217);
+}
+
+
+.tour-america_north-niagara header {
+    background-image: url("../img/places/america_north/niagara_01.jpg");
+    background-position: top !important;
+}
+
+.tour-america_north-niagara header::before {
+    background-image: linear-gradient(to bottom,#f79d00,#64f38c);
+    opacity: 0.3 !important;
+}
+
+.tour-america_north-niagara #hero-image {
+    background-image: url("../img/places/america_north/niagara_01.jpg");
+    background-position: top !important;
+}
+
+.tour-america_north-niagara #hero-image::before {
+    background-image: linear-gradient(to bottom,#f79d00,#64f38c);
+    opacity: 0.3 !important;
+}
+
+
+.tour-america_north-sanfran header {
+    background-image: url("../img/places/america_north/sanfran_01.jpg");
+}
+
+.tour-america_north-sanfran header::before {
+    background-image: linear-gradient(to bottom right,#43C6AC,#191654);
+}
+
+.tour-america_north-sanfran #hero-image {
+    background-image: url("../img/places/america_north/sanfran_01.jpg");
+}
+
+.tour-america_north-sanfran #hero-image::before {
+    background-image: linear-gradient(to bottom right,#43C6AC,#191654);
+}
+
+
+.tour-america_north-hollywood header {
+    background-image: url("../img/places/america_north/hollywood_01.jpg");
+    background-position: 50% 40% !important;
+}
+
+.tour-america_north-hollywood header::before {
+    background-image: linear-gradient(to top left,#6190E8,#A7BFE8);
+}
+
+.tour-america_north-hollywood #hero-image {
+    background-image: url("../img/places/america_north/hollywood_01.jpg");
+    background-position: 50% 35% !important;
+}
+
+.tour-america_north-hollywood #hero-image::before {
+    background-image: linear-gradient(to top left,#6190E8,#A7BFE8);
+}
+
+/* South America */
+.tour-america_south-rio header {
+    background-image: url("../img/places/america_south/rio_02.jpg");
+    background-position: center !important;
+}
+
+.tour-america_south-rio header::before {
+    background-image: linear-gradient(to bottom,#283c86,#45a247);
+}
+
+.tour-america_south-rio #hero-image {
+    background-image: url("../img/places/america_south/rio_02.jpg");
+    background-position: center !important;
+}
+
+.tour-america_south-rio #hero-image::before {
+    background-image: linear-gradient(to bottom,#283c86,#45a247);
+}
+
+
+/* Oceania */
+.tour-oceania-russell header {
+    background-image: url("../img/places/oceania/russell_01.jpg");
+    background-position: center;
+}
+
+.tour-oceania-russell header::before {
+    background-image: linear-gradient(to bottom right,#5f2c82,#49a09d);
+}
+
+.tour-oceania-russell #hero-image {
+    background-image: url("../img/places/oceania/russell_01.jpg");
+    background-position: center;
+}
+
+.tour-oceania-russell #hero-image::before {
+    background-image: linear-gradient(to bottom right,#5f2c82,#49a09d);
+}
+
+
+.tour-oceania-wellington header {
+    background-image: url("../img/places/oceania/wellington_01.jpg");
+    background-position: center;
+}
+
+.tour-oceania-wellington header::before {
+    background-image: linear-gradient(to bottom left,#4AC29A,#BDFFF3);
+}
+
+.tour-oceania-wellington #hero-image {
+    background-image: url("../img/places/oceania/wellington_01.jpg");
+    background-position: center;
+}
+
+.tour-oceania-wellington #hero-image::before {
+    background-image: linear-gradient(to bottom left,#4AC29A,#BDFFF3);
+}
+
+
+.tour-oceania-fiji header {
+    background-image: url("../img/places/oceania/fiji_01.jpg");
+    background-position: 50% 35% !important;
+}
+
+.tour-oceania-fiji header::before {
+    background-image: linear-gradient(to top,#000046,#1CB5E0);
+}
+
+.tour-oceania-fiji #hero-image {
+    background-image: url("../img/places/oceania/fiji_01.jpg");
+    background-position: 50% 70%;
+}
+
+.tour-oceania-fiji #hero-image::before {
+    background-image: linear-gradient(to top,#000046,#1CB5E0);
+}
